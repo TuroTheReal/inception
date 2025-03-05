@@ -3,7 +3,7 @@ FROM debian:bullseye
 RUN apt update -y && apt upgrade -y
 
 RUN apt install -y curl mariadb-client php-fpm php-gd \
-	php-cli php-curl php-mbstring php-zip  php-mysql \
+	php-curl php-cli php-mbstring php-zip php-mysql \
 	php-xml php-mysqli
 
 RUN sed -i 's|^listen = /run/php/php7.4-fpm.sock|listen = 0.0.0.0:9000|' /etc/php/7.4/fpm/pool.d/www.conf

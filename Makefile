@@ -34,7 +34,7 @@ rebuild:
 ps:
 	docker-compose -f $(COMP) ps -a
 
-log:
+logs:
 	docker-compose -f $(COMP) logs -f
 
 clean: down

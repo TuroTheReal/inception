@@ -7,7 +7,9 @@ set -eo pipefail
 if [ ! -d "/var/lib/mysql/is_rdy" ]; then
 
 	# Init les fichiers de la base de données MySQL (avant de démarrer serv MySQL)
-	mysql_install_db --user=mysql --datadir=/var/lib/mysql
+	if [ ! -d "/var/lib/mysql/mysql" ]; then
+		mysql_install_db --user=mysql --datadir=/var/lib/mysql
+	fi
 
 	# Demarre Serveur MySQL pour les config initiales
 	mysqld --user=mysql --skip-networking &
@@ -23,7 +25,7 @@ if [ ! -d "/var/lib/mysql/is_rdy" ]; then
 	mysql -e "CREATE USER IF NOT EXISTS 'root'@'%';"
 
 	# Modifie mdp de 'root' pour le laisser vide
-	mysql -e "ALTER USER 'root'@'%' IDENTIFIED BY '';"
+	mysql -e "ALTER USER 'root'@'%' IDENTIFIED BY '${MYSQL_ROOT_PASSWORD}';"
 
 	# Crée MYSQL_DATABASE
 	mysql -e "CREATE DATABASE IF NOT EXISTS ${MYSQL_DATABASE};"
@@ -41,12 +43,12 @@ if [ ! -d "/var/lib/mysql/is_rdy" ]; then
 	mysql -e "FLUSH PRIVILEGES;"
 
 	touch /var/lib/mysql/is_rdy
-	# echo "done" > /var/lib/mysql/is_rdy
 
 	# Arrête le serveur MySQL temporaire lancé plus tôt
 	mysqladmin -uroot -p${MYSQL_ROOT_PASSWORD} shutdown
 	wait "$pid"
 fi
+
 
 # Start MySQL serv de manière définitive avec les param CMD du Dockerfile
 exec gosu mysql "$@"
