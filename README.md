@@ -38,11 +38,8 @@ cd inception
 
 # Fill and rename the .envTemplate with .env
 
-# Create necessary directories and set permissions
-make setup
-
 # Build and start all services
-make up
+make
 
 # Stop all services
 make down
