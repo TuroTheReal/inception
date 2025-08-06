@@ -57,7 +57,7 @@ make logs
 ### Quick Start
 ```bash
 # Build and launch the complete infrastructure
-make up
+make
 ```
 
 ### Service Management
