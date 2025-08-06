@@ -176,13 +176,6 @@ The project emphasizes security, scalability, and maintainability while avoiding
 
 ## 42 School Standards
 
-### Norm Requirements
-- ✅ Maximum 25 lines per function
-- ✅ Maximum 5 functions per file
-- ✅ Proper indentation and formatting
-- ✅ No forbidden functions usage
-- ✅ Compilation without warnings
-
 ### Project Standards
 - ✅ Custom Docker images only (no pre-built images from Docker Hub)
 - ✅ Docker Compose orchestration for all services
@@ -200,7 +193,6 @@ The project emphasizes security, scalability, and maintainability while avoiding
 - ✅ **Network Security**: Isolated container communication
 
 ### Security Standards
-- ✅ All containers run as non-root users
 - ✅ SSL certificates properly configured and functional
 - ✅ Environment variables for sensitive data
 - ✅ Network isolation between services
@@ -218,7 +210,6 @@ The project emphasizes security, scalability, and maintainability while avoiding
 ---
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Made%20with-Docker-blue.svg"/>
   <img src="https://img.shields.io/badge/DevOps-Infrastructure%20as%20Code-green.svg"/>
   <img src="https://img.shields.io/badge/Security-SSL%2FTLS-red.svg"/>
   <img src="https://img.shields.io/badge/Made%20with-Docker-2496ED?logo=docker&logoColor=white" alt="Made with Docker" />
