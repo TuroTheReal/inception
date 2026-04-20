@@ -12,9 +12,9 @@
 
 ## About
 
-This repository contains my implementation of the **Inception** project at 42 School.  
+This repository contains my implementation of the **Inception** project at 42 School.
 Inception is a comprehensive **system administration** and **DevOps** project that focuses on **containerization**, **infrastructure as code**,
-and **service orchestration** using **Docker** and **Docker Compose**.  
+and **service orchestration** using **Docker** and **Docker Compose**.
 The challenge is to create a complete web infrastructure from scratch using custom Docker images, without relying on pre-built images from Docker Hub.
 
 This project demonstrates mastery of **modern DevOps practices**, **container orchestration**,
@@ -197,6 +197,13 @@ The project emphasizes security, scalability, and maintainability while avoiding
 - ✅ No hardcoded passwords or secrets in code
 
 
+## 📝 Related Articles
+
+Blog posts documenting the learning process and context behind this project:
+
+- 📝 [42 Piscine and Common Core: What I Learned](https://arthur-portfolio.com/en/blog/42-piscine-and-core-curriculum) — Reflections on 42 School's selection process and 2-year curriculum
+
+---
 ## Contact
 
 - **GitHub**: [@TuroTheReal](https://github.com/TuroTheReal)
