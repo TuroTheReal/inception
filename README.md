@@ -9,6 +9,8 @@
 - [Project Overview](#project-overview)
 - [Infrastructure Architecture](#infrastructure-architecture)
 - [42 School Standards](#42-school-standards)
+- [Related Articles](#-related-articles)
+- [Contact](#contact)
 
 ## About
 
@@ -36,7 +38,7 @@ and **production-ready infrastructure deployment** - essential skills for modern
 git clone https://github.com/TuroTheReal/inception.git
 cd inception
 
-# Fill and rename the .envTemplate with .env
+# Fill and rename srcs/.envTemplate to srcs/.env
 
 # Build and start all services
 make
